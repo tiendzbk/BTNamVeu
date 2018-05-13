@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My website using bootrap 3</title>
+	<!--nhúng boostrap 3 dùng CDN, cái này ko cần download, n có mạng ms hiển thị đc nội dung-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  	/*CSS cho các phần cần thiết, như font chữ, căn khoảng cách*/
+  	* {
+	    box-sizing: border-box;
+	}
+
+	body {
+	    font-family: Arial;
+	    padding: 10px;
+	    background: #f1f1f1;
+	}
+
+	/* Header/Blog Title */
+	.header {
+	    padding: 30px;
+	    text-align: center;
+	    background: white;
+	}
+
+	.header h1 {
+	    font-size: 50px;
+	}
+
+	.fakeimg {
+	    background-color: #aaa;
+	    width: 100%;
+	    padding: 20px;
+	}
+
+	/* Add a card effect for articles */
+	.card {
+	    background-color: white;
+	    padding: 20px;
+	    margin-top: 20px;
+	}
+
+	/* Footer */
+	.footer {
+	    padding: 20px;
+	    text-align: center;
+	    background: #ddd;
+	    margin-top: 20px;
+	}
+  </style>
+</head>
+<body>
+	<div class="header">
+	  <h1>My Website</h1>
+	</div>
+	<!--Đây là phần navbar định nghĩa sẵn trong boostrap 3, chọn navbar-inverse nó ra màu đen, còn navbar-default nó ra màu trắng-->
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display : chỗ này khi m co màn hình lại nó hiện cho m 3 cái gạch, ấn vào nó tự hiện ra các thành phần của 1 menu -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">My website</a>
+			</div>
+	
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">link</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<!--container-fluid : cho phép hiển thị trên toàn màn hình, row : hiển thị cùng 1 hàng
+		col-md-9, col-md-3 : chia cột, boostrap hỗ trợ chia 12 cột, thì bên trái chia 9 cột, bên phải chia 3 cột, còn md là để chia theo kích thước màn hình medium từ  992 pixels to 1199 pixels
+	-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9">
+				 <div class="card">
+			      <h2>TITLE HEADING</h2>
+			      <h5>Title description, Dec 7, 2017</h5>
+			      <div class="fakeimg" style="height:200px;">Image</div>
+			      <p>Some text..</p>
+			      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+			    </div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="card">
+			      <h2>About Me</h2>
+			      <div class="fakeimg" style="height:100px;">Image</div>
+			      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+			    </div>
+
+			    <div class="card">
+			      <h3>Follow Me</h3>
+			      <p>Some text..</p>
+			    </div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 footer">
+				 <h2>Footer</h2>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
