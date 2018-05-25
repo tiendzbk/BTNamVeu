@@ -82,11 +82,22 @@
                 }, "fast");
 
             })
+
+            $("#firstname").blur(function() {
+                $(".required1").animate({
+                    left: '10px',
+                })
+            })
             $("#lastname").focus(function() {
                 $(".required2").animate({
                     left: '400px',
                     opacity: '0.4',
                 }, "fast");
+            })
+            $("#lastname").blur(function() {
+                $(".required2").animate({
+                    left: '10px',
+                })
             })
             $("#email_address").focus(function() {
                 $(".required3").animate({
@@ -94,17 +105,32 @@
                     opacity: '0.4',
                 }, "fast");
             })
+            $("#email_address").blur(function() {
+                $(".required3").animate({
+                    left: '10px',
+                })
+            })
             $("#password").focus(function() {
                 $(".required4").animate({
                     left: '400px',
                     opacity: '0.4',
                 }, "fast");
             })
+            $("#password").blur(function() {
+                $(".required4").animate({
+                    left: '10px',
+                })
+            })
             $("#npassword").focus(function() {
                 $(".required5").animate({
                     left: '400px',
                     opacity: '0.4',
                 }, "fast");
+            })
+            $("#npassword").blur(function() {
+                $(".required5").animate({
+                    left: '10px',
+                })
             })
         })
     </script>
