@@ -1,0 +1,271 @@
+<html>
+
+<head>
+    <title> Form dang ki </title>
+    <meta charset="utf-8"></meta>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        table {
+            min-width: 500px;
+            border: 1px solid lightgrey;
+        }
+        
+        label {
+            color: #999999;
+            font: 500 11px/1.55 Poppins, Helvetica Neue, Verdana, Arial, sans-serif;
+            top: 10px;
+            right: auto;
+            bottom: 0px;
+            position: absolute;
+            left: 10px;
+            -webkit-transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+            -moz-transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+            transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+            line-height: 44px;
+            margin: 0;
+        }
+        
+        label em {
+            color: red;
+        }
+        
+        input.input-text {
+            border-width: 0;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: lightgrey;
+            padding-left: 0;
+            padding-right: 0;
+            font: 500 12px/1.55 PT Sans, Helvetica Neue, Verdana, Arial, sans-serif;
+            width: 100%;
+            height: 40px !important;
+            color: #999999;
+        }
+        
+        input.input-text:focus {
+            outline-color: transparent;
+            border-width: 0;
+            border-bottom-width: 1px;
+            border-bottom-color: black;
+        }
+        
+        .lengend {
+            font: 500 14px/1.35 PT Sans, Helvetica Neue, Verdana, Arial, sans-serif;
+            color: #282828;
+        }
+        
+        .input-box {
+            padding-top: 2px;
+        }
+        
+        button {
+            border-color: #282828;
+            background: #282828;
+            color: white;
+            font: 600 14px/1.35 PT Sans, Helvetica Neue, Verdana, Arial, sans-serif;
+            width: 500px;
+            height: 40px;
+        }
+        
+        button:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#firstname").focus(function() {
+                $(".required1").animate({
+                    left: '400px',
+                    opacity: '0.4',
+                }, "fast");
+
+            })
+            $("#lastname").focus(function() {
+                $(".required2").animate({
+                    left: '400px',
+                    opacity: '0.4',
+                }, "fast");
+            })
+            $("#email_address").focus(function() {
+                $(".required3").animate({
+                    left: '400px',
+                    opacity: '0.4',
+                }, "fast");
+            })
+            $("#password").focus(function() {
+                $(".required4").animate({
+                    left: '400px',
+                    opacity: '0.4',
+                }, "fast");
+            })
+            $("#npassword").focus(function() {
+                $(".required5").animate({
+                    left: '400px',
+                    opacity: '0.4',
+                }, "fast");
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1 align="center"> Dang ki tai khoan </h1>
+    <table cellpadding="10" cellspacing="1" align="center">
+        <tr>
+            <td>
+                <h2 class="lengend">THÔNG TIN CÁ NHÂN</h2>
+            </td>
+        </tr>
+        <tr>
+            <td style="position : relative">
+                <label for="firstname" class="required1">Họ<em>*</em></label>
+
+                <input type="text" id="firstname" name="firstname" value title="Họ" maxlength="255" class="input-text required-entry">
+            </td>
+        </tr>
+        <tr>
+            <td style="position : relative">
+                <label for="lastname" class="required2">Tên<em>*</em></label>
+                <input type="text" id="lastname" name="lastname" value="" title="Tên" maxlength="255" class="input-text required-entry">
+            </td>
+        </tr>
+        <tr>
+            <td style="position : relative">
+                <label for="email_address" class="required3">Địa chỉ Email<em>*</em></label>
+                <input type="text" name="email" id="email_address" value="" title="Địa chỉ email" class="input-text validate-email required-entry">
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <h2 class="lengend">THÔNG TIN ĐĂNG NHẬP</h2>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="position : relative">
+                <label for="password" class="required4">Mật Khẩu<em>*</em></label>
+                <input type="password" name="password" value="" id="password" title="Mật khẩu" class="input-text required-entry">
+            </td>
+        </tr>
+        <tr>
+            <td style="position : relative">
+                <label for="password" class="required5">Nhập Mật Khẩu<em>*</em></label>
+                <input type="password" name="npassword" value="" id="npassword" title="hập Lại Mật khẩu" class="input-text required-entry ">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button align="center"> chap nhan </button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
+
+
+
+<!-- <form action="https://92wear.vn/customer/account/createpost/" method="post" id="form-validate">
+    <div class="fieldset">
+        <input type="hidden" name="success_url" value="">
+        <input type="hidden" name="error_url" value="">
+        <input type="hidden" name="form_key" value="naT4uNKSi1Q0YHqo">
+        <h2 class="legend">Thông tin cá nhân</h2>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="customer-name">
+                    <div class="field name-firstname">
+                        <label for="firstname" class="required"><em>*</em>Họ</label>
+                        <div class="input-box">
+                            <input type="text" id="firstname" name="firstname" value="" title="Họ" maxlength="255" class="input-text required-entry">
+                        </div>
+                    </div>
+                    <div class="field name-lastname">
+                        <label for="lastname" class="required"><em>*</em>Tên</label>
+                        <div class="input-box">
+                            <input type="text" id="lastname" name="lastname" value="" title="Tên" maxlength="255" class="input-text required-entry">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="fields">
+                <div class="field">
+                    <label for="email_address" class="required"><em>*</em>Địa chỉ email</label>
+                    <div class="input-box">
+                        <input type="text" name="email" id="email_address" value="" title="Địa chỉ email" class="input-text validate-email required-entry">
+                    </div>
+                </div>
+            </li>
+            <li class="control signup-newsletter">
+                <div class="input-box">
+                    <input type="checkbox" name="is_subscribed" title="Đăng ký nhận bản tin" value="1" id="is_subscribed" class="checkbox">
+                </div>
+                <label for="is_subscribed">Đăng ký nhận bản tin</label>
+            </li>
+        </ul>
+    </div>
+    <div class="fieldset">
+        <h2 class="legend">Thông tin đăng nhập</h2>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label for="password" class="required"><em>*</em>Mật khẩu</label>
+                    <div class="input-box">
+                        <input type="password" name="password" id="password" title="Mật khẩu" class="input-text required-entry validate-password">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="confirmation" class="required"><em>*</em>Xác nhận mật khẩu</label>
+                    <div class="input-box">
+                        <input type="password" name="confirmation" title="Xác nhận mật khẩu" id="confirmation" class="input-text required-entry validate-cpassword">
+                    </div>
+                </div>
+            </li>
+            <li id="remember-me-box" class="control remember-me-box">
+                <div class="input-box">
+                    <input type="checkbox" name="persistent_remember_me" class="checkbox" id="remember_me2K2PD3GSIt" checked="checked" title="Remember Me">
+                </div>
+                <label for="remember_me2K2PD3GSIt">Nhớ tôi</label>
+                <a class="link-tip" href="#">Đây là gì?</a>
+            </li>
+        </ul>
+        <div class="remember-me-popup">
+            <div class="remember-me-popup-head">
+                <h3>Đây là gì?</h3>
+                <a href="#" class="remember-me-popup-close" title="Đóng">Đóng</a>
+            </div>
+            <div class="remember-me-popup-body">
+                <p>Chọn "Nhớ tôi" sẽ giúp bạn truy cập vào giỏ hàng của bạn trên máy tính này khi bạn đã đăng xuất</p>
+                <div class="remember-me-popup-close-button a-right">
+                    <a href="#" class="remember-me-popup-close button" title="Đóng"><span>Đóng</span></a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            //<![CDATA[
+            function toggleRememberMePopup() {
+                var formParent = jQuery(this).parents('form:first');
+                formParent.find('.remember-me-box a').toggleClass('hide');
+                formParent.find('.remember-me-popup').toggleClass('show');
+                return false;
+            }
+            var rememberMeToggleSetup = false;
+            jQuery(document).ready(function() {
+                if (!rememberMeToggleSetup) {
+                    jQuery('.remember-me-box a, .remember-me-popup a').on('click', toggleRememberMePopup);
+                    rememberMeToggleSetup = true;
+                }
+            });
+            //]]>
+        </script>
+    </div>
+    <div class="buttons-set">
+        <p class="required">* Các trường bắt buộc</p>
+        <p class="back-link"><a href="https://92wear.vn/customer/account/login/" class="back-link"><small>« </small>Trở lại</a></p>
+        <button type="submit" title="Chấp nhận" class="button"><span><span>Chấp nhận</span></span></button>
+    </div>
+</form> -->
